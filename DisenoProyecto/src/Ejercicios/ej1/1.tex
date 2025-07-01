@@ -1,29 +1,20 @@
-\textbf{Ejercicio 1.} (25 pts.) Evalúa las siguientes expresiones usando las téctnicas de paso de prámetros que se indican. En cada caso debes mostrar cómo queda el ambiente y memoria final, tal y como se vio en clase. \vspace{0.3cm}
+\textbf{Objetivo del proyecto + metodo smart}\vspace{.5cm}
+
+
+Antes de redactar en el formato \texttt{SMART} el que del proyecto; voy a explicar a grandes razgos que espero conseguir. \vspace{.3cm}
+
+La idea es poder tener un comando en terminal ya sea usando bash o python, que sea capaz de recibir un chat exportado de whatsap y darme estadisticas relevantes del mismo. Algunas ideas principales podrian ser: 
 
 \begin{itemize}
-    \item Evalúa el siguiente código bajo paso por valor y por referencia.
-\begin{lstlisting}
-(let [(list1 (box '(1 2 3)))
-    (list2 (box '(4 5 6)))
-    (concat-lists (lambda (x y)
-                    (begin
-                        (set! x (append (unbox x) (unbox y)))
-                        (set! y '(0)))))]
-    (begin
-        (concat-lists list1 list2)
-        (list (unbox list1) (unbox list2))))
-\end{lstlisting}
-
-    \item Evalúa el siguiente código bajo paso por nombre y por necesidad.
-\begin{lstlisting}
-(let [(acc 0)
-    (conditional (lambda (x)
-                    (if (> x 0)
-                        (begin (set! acc (+ acc 1)) acc)
-                        (begin (set! acc (- acc 1)) acc))))
-    (compute (lambda (y) (* y y)))]
-(compute (conditional acc)))
-\end{lstlisting}
+    \item Conseguir las frases mas recurrentes
+    \item Conseguir las palabras mas recurrentes
+    \item Ver la cantidad de mensajes por individuo (todavia no se si va a funcionar tambien para chats grupales)
+    \item Ver los horarios mas frecuentes 
+    \item Longitud promedio de mensajes 
+    \item Datos de imagenes/ emojis (todavia no estoy seguro de eso)
+    \item Otras metricas que vaya encontrando en el camino
 \end{itemize}
 
+Lo anterior cubre, el ser especifico y medible, ademas de ser alcanzable y creo se puede realizar en el tiempo especificado de la entrega.   \vspace{.3cm}
 
+Finalmente, para la relevancia, surgio de un argumento que tuve con un amigo sobre quien preguntaba mas un tipo de pregunta especifica, en el momento cree un scrip de python con gpt y use colab para correr y encontrar este caso especifico, pero creo que podria extenderlo mas y abstraerlo (ademas de mejorarlo). \vspace{.3cm}
