@@ -1,3 +1,0 @@
-numbers:
-	seq 7 > $@
-

@@ -1,0 +1,42 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+
+%----- Configuración del estilo del documento------%
+\usepackage{epsfig,graphicx}
+\usepackage[left=2cm,right=2cm,top=1.8cm,bottom=2.3cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\usepackage{xcolor}
+\usepackage{soul}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
+
+%Color bibi
+\definecolor{bibi}{RGB}{0,103,148}
+
+%------ Paquetes matemáticos básicos --------%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+%------ Paquetes para codigo --------%
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{tikz}
+
+\begin{document}
+
+%------ Encabezado -------- %
+\input{src/Encabezado/encabezado}
+\rule{16.9cm}{0.1mm}
+\vspace{0.3cm}
+
+\vspace{0.3cm}
+
+%------ Preguntas -------- 
+
+\input{src/Ejercicios/ej1/1}
+
+\input{src/Ejercicios/ej2/2}
+
+\end{document}
