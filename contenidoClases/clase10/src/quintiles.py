@@ -55,9 +55,15 @@ for i in range(19):
 
 qt.append(df.loc[(df['AÑO']==year) & (df['ENTIDAD']==entidad) & (100<df['EDAD']), 'POBLACION'].sum())
 
-# Result of population
-print(f"MX total population in the year {year} is {total}")
 
-print(f"QT size {len(qt)}")
+# Results: 
+## If deciles print option
+## TODO: change calculation type
 if args.decile:
     print("Will calculate deciles")
+
+## Result of population
+print(f"MX total population in the year {year} is {total}")
+
+for e in qt:
+    print(int(e))
